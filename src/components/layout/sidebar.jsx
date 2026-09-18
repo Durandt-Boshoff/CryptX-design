@@ -12,7 +12,7 @@ const menuItems = [
 
 function Sidebar() {
     return (
-        <aside className="fixed left-0 top-0 h-screen w-[162px] bg-[var(--sidebar)] px-6 py-6">
+        <aside className="fixed left-0 top-0 h-screen w-40.5 bg-[var(--sidebar)] px-6 py-6">
             <div className="mb-10 flex items-center gap-2">
                 <img
                     src={logo}
