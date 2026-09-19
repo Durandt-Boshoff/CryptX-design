@@ -1,4 +1,5 @@
-import MetricCard from "./MetricCard";
+import MetricCard from "../ui/MetricCard";
+import ChartVisual from "../ui/ChartVisual";
 
 const cryptoData = [
     {
@@ -48,7 +49,7 @@ function MainContent() {
                         BTC Prices
                     </h2>
 
-                    {/* Chart will go here */}
+                    <ChartVisual />
                 </div>
 
             </div>

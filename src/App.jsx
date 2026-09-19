@@ -1,6 +1,6 @@
 import Sidebar from "./components/layout/sidebar";
 import Header from "./components/layout/header";
-import MainContent from "./components/ui/MainContent";
+import MainContent from "./components/layout/MainContent";
 
 function App() {
   return (
