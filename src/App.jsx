@@ -1,5 +1,6 @@
 import Sidebar from "./components/layout/sidebar";
 import Header from "./components/layout/header";
+import MainContent from "./components/ui/MainContent";
 
 function App() {
   return (
@@ -8,8 +9,7 @@ function App() {
 
       <main className="ml-40.5">
         <Header />
-        
-        {/* Dashboard content goes here */}
+        <MainContent />
       </main>
     </div>
   );
