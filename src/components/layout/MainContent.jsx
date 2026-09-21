@@ -1,6 +1,7 @@
 import MetricCard from "../ui/MetricCard";
 import ChartVisual from "../ui/ChartVisual";
 import LiveMarket from "../ui/LiveMarket";
+import TransactionTable from "../ui/TransactionTable";
 
 const cryptoData = [
     {
@@ -56,12 +57,9 @@ function MainContent() {
             </div>
 
             {/* Bottom Dashboard Section */}
-            <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[2fr_1fr]">
+            <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-[1.8fr_1fr]">
                 <LiveMarket />
-
-                <div>
-                    {/* Transactions */}
-                </div>
+                <TransactionTable />
             </div>
         </section>
     );
