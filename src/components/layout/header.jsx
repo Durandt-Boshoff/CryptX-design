@@ -1,3 +1,11 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faMagnifyingGlass,
+    faBell,
+    faCircleQuestion,
+    faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+
 function Header() {
     return (
         <header className="relative flex h-16 items-center justify-between px-6 after:absolute after:bottom-0 after:left-6 after:right-6 after:border-b after:border-gray-100">
@@ -9,18 +17,25 @@ function Header() {
                     className="w-full text-xs outline-none placeholder:text-gray-400"
                 />
 
-                <span className="text-gray-400">
-                    G
-                </span>
+                <FontAwesomeIcon
+                    icon={faMagnifyingGlass}
+                    className="text-xs text-gray-400"
+                />
             </div>
 
             {/* Right Side */}
             <div className="flex items-center gap-6">
                 {/* Notification */}
-                <span className="text-gray-400">N</span>
+                <FontAwesomeIcon
+                    icon={faBell}
+                    className="text-s text-gray-400"
+                />
 
                 {/* Help */}
-                <span className="text-gray-400">?</span>
+                <FontAwesomeIcon
+                    icon={faCircleQuestion}
+                    className="text-s text-gray-400"
+                />
 
                 {/* Profile */}
                 <div className="flex items-center gap-3">
@@ -35,7 +50,10 @@ function Header() {
                         </p>
                     </div>
 
-                    <span className="text-gray-400">⌄</span>
+                    <FontAwesomeIcon
+                        icon={faChevronDown}
+                        className="text-xs text-gray-400"
+                    />
                 </div>
             </div>
         </header>

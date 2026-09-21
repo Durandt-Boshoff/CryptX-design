@@ -1,4 +1,6 @@
-function MetricCard({ symbol, price, change }) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+function MetricCard({ symbol, price, change, icon }) {
     const isPositive = change.startsWith("+");
 
     return (
@@ -6,8 +8,8 @@ function MetricCard({ symbol, price, change }) {
             {/* Top Row */}
             <div className="mb-4 flex items-center justify-between">
                 {/* Coin Icon */}
-                <div className="h-8 w-8 items-center justify-center rounded-lg bg-indigo-500">
-                    {/* Font Awesome icon */}
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500">
+                    <FontAwesomeIcon icon={icon} className="text-white" />
                 </div>
 
                 {/* Change */}
@@ -28,9 +30,9 @@ function MetricCard({ symbol, price, change }) {
             </h3>
 
             {/* Coin Name */}
-            <p className=" mt-1 text-xs text-gray-400">
+            <p className="mt-1 text-xs text-gray-400">
                 {symbol}
-            </p>            
+            </p>
         </div>
     );
 }

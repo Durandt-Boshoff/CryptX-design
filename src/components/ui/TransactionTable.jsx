@@ -1,3 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faAnglesUp,
+    faAnglesDown,
+} from "@fortawesome/free-solid-svg-icons";
+
 const transactions = [
     {
         name: "Ethereum",
@@ -5,6 +11,7 @@ const transactions = [
         amount: "$24,102",
         time: "Today, 19:30",
         positive: true,
+        icon: faAnglesUp,
     },
     {
         name: "Bitcoin",
@@ -12,6 +19,7 @@ const transactions = [
         amount: "$4,157",
         time: "Today, 14:32",
         positive: false,
+        icon: faAnglesDown,
     },
     {
         name: "Bitcoin",
@@ -19,6 +27,7 @@ const transactions = [
         amount: "$64,784",
         time: "Today, 13:50",
         positive: false,
+        icon: faAnglesDown,
     },
     {
         name: "Litecoin",
@@ -26,6 +35,7 @@ const transactions = [
         amount: "$14,265",
         time: "Today, 09:38",
         positive: false,
+        icon: faAnglesDown,
     },
 ];
 
@@ -52,6 +62,7 @@ function TransactionTable() {
                                 }`}
                             >
                                 {/* Font Awesome icon later */}
+                                <FontAwesomeIcon icon={transaction.icon} />
                             </div>
 
                             <div>

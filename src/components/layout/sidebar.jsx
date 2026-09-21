@@ -1,13 +1,23 @@
 import logo from "../../assets/cryptx-logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faTableCellsLarge,
+    faChartPie,
+    faWallet,
+    faEnvelope,
+    faGear,
+    faRightFromBracket,
+    faArrowRightArrowLeft
+} from "@fortawesome/free-solid-svg-icons";
 
 const menuItems = [
-    {name: "Overview", icon: ""},
-    {name: "Chart", icon: ""},
-    {name: "Transactions", icon: ""},
-    {name: "Wallet", icon: ""},
-    {name: "Mailbox", icon: ""},
-    {name: "Settings", icon: ""},
-    {name: "Logout", icon: ""},
+    {name: "Overview", icon: faTableCellsLarge},
+    {name: "Chart", icon: faChartPie},
+    {name: "Transactions", icon: faArrowRightArrowLeft},
+    {name: "Wallet", icon: faWallet},
+    {name: "Mailbox", icon: faEnvelope},
+    {name: "Settings", icon: faGear},
+    {name: "Logout", icon: faRightFromBracket},
 ]
 
 function Sidebar() {
@@ -38,7 +48,9 @@ function Sidebar() {
                                 : "text-gray-400"
                             }`}
                         >
-                            <span className="w-4 text-center">{item.icon}</span>
+                            <span className="w-4 text-center text-sm">
+                                <FontAwesomeIcon icon={item.icon} />
+                            </span>
 
                             <span>{item.name}</span>
 

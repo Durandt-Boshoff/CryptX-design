@@ -1,3 +1,11 @@
+{/* Icons import */}
+import { faCoins } from "@fortawesome/free-solid-svg-icons";
+import {
+    faBitcoin,
+    faEthereum,
+} from "@fortawesome/free-brands-svg-icons";
+
+{/* Main imports */}
 import MetricCard from "../ui/MetricCard";
 import ChartVisual from "../ui/ChartVisual";
 import LiveMarket from "../ui/LiveMarket";
@@ -8,21 +16,25 @@ const cryptoData = [
         symbol: "Bitcoin - BTC",
         price: "$40,291",
         change: "+0.25%",
+        icon: faBitcoin,
     },
     {
         symbol: "Ethereum - ETH",
         price: "$18,291",
         change: "+0.25%",
+        icon: faEthereum,
     },
     {
         symbol: "Litecoin - LTC",
         price: "$8,291",
         change: "+0.25%",
+        icon: faCoins,
     },
     {
         symbol: "Cardano - ADA",
         price: "$3,291",
         change: "-2.05%",
+        icon: faCoins,
     },
 ];
 
@@ -37,10 +49,10 @@ function MainContent() {
                     {cryptoData.map((crypto) => (
                         <MetricCard
                             key={crypto.symbol}
-                            name={crypto.name}
                             symbol={crypto.symbol}
                             price={crypto.price}
                             change={crypto.change}
+                            icon={crypto.icon}
                         />
                     ))}
                 </div>
