@@ -22,8 +22,8 @@ const menuItems = [
 
 function Sidebar() {
     return (
-        <aside className="fixed left-0 top-0 h-screen w-40.5 bg-[var(--sidebar)] px-6 py-6">
-            <div className="mb-10 flex items-center gap-2">
+        <aside className="relative left-0 top-0 z-20 h-auto w-full bg-[var(--sidebar)] px-4 py-4 lg:fixed lg:h-screen lg:w-40.5 lg:border-b-0 lg:px-6 lg:py-6 lg:bg-[var(--sidebar)]">
+            <div className="mb-5 flex items-center gap-2 lg:mb-10">
                 <img
                     src={logo}
                     alt="CryptX Logo"
@@ -35,7 +35,7 @@ function Sidebar() {
                 </h1>
             </div>
 
-            <nav className="flex flex-col gap-6">
+            <nav className="flex flex-row flex-wrap gap-4 lg:flex-col lg:gap-6">
                 {menuItems.map((item, index) => {
                     const isActive = index === 0;
 

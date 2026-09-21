@@ -8,9 +8,9 @@ import {
 
 function Header() {
     return (
-        <header className="relative flex h-16 items-center justify-between px-6 after:absolute after:bottom-0 after:left-6 after:right-6 after:border-b after:border-gray-100">
+        <header className="relative flex h-16 items-center justify-between px-4 sm:px-6 after:absolute after:bottom-0 after:left-4 after:right-4 after:border-b after:border-gray-100 sm:after:left-6 sm:after:right-6">
             {/* Search Bar */}
-            <div className="flex h-10 w-56 items-center rounded-lg border border-gray-200 px-3">
+            <div className="flex h-10 w-40 items-center rounded-lg border border-gray-200 px-3 sm:w-56">
                 <input
                     type="text"
                     placeholder="Search type or Keywords"
@@ -24,7 +24,7 @@ function Header() {
             </div>
 
             {/* Right Side */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3 sm:gap-6">
                 {/* Notification */}
                 <FontAwesomeIcon
                     icon={faBell}
@@ -38,10 +38,10 @@ function Header() {
                 />
 
                 {/* Profile */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3">
                     <div className="h-10 w-10 rounded-full bg-gray-400"></div>
 
-                    <div className="text-xs">
+                    <div className="hidden text-xs sm:block">
                         <p className="font-semibold text-gray-900">
                             Laurice
                         </p>

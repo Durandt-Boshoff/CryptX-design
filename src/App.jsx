@@ -7,7 +7,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Sidebar />
 
-      <main className="ml-40.5">
+      <main className="ml-0 lg:ml-40.5">
         <Header />
         <MainContent />
       </main>
